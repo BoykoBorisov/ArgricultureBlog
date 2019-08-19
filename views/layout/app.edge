@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>ЗВП</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+  <link rel="stylesheet" href="/style.css">
+  <link rel="icon" href="/11.ico">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+
+<body>
+<!--navigation bar-->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <a class="navbar-brand" href="/"><img src="/images/a.png" height="30" width="30"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="dLabel"><a href="/">Начало</a></li>
+        <li><a href="/articles">Актуално</a></li>
+        <li><a href="/items">Борса</a></li>
+        <li><a href="/about">За нас</a></li>
+        @if(auth == 1)
+        <li><a href="/upload">Качи статия</a></li>
+        @endif
+        @if(auth)
+        <li><a href="/items/add">Добави продукция</a></li>
+        @endif
+        @if(!auth)
+        <li><a href="/login">Влез</a></li>
+        <li><a href="/signup">Регистрация</a><li>
+        @endif
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <br><br>
+
+@!section('content')
+
+<!--Footer-->
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-sm-4 footerleft ">
+        <div class="logofooter"> <p>Контакти за връзка:</p></div>
+        <p> Адрес : Перник, жк. Изток, ул. Бл.Гебрев 17, 2304 Перник</p>
+        <p> Email :<br><ul>
+              <li>aangelova@abv.bg <br></li>
+              <li>alexandrina.mihalkova@abv.bg <br></li>
+              <li>boyko.borisov@abv.bg  <br></li>
+              <li>kamelia.a@abv.bg</li>
+               <li>raiana.parvanova@abv.bg<br></li>
+              </ul>
+      </div>
+      <div class="col-md-4 col-sm-3 footerleft cl-md-offset-1">
+        <p>Фейсбук страница: <a href="https://www.facebook.com/%D0%97%D0%B5%D0%BC%D0%B5%D0%B4%D0%B5%D0%BB%D0%B8%D0%B5-%D0%B2-%D0%9F%D0%B5%D1%80%D0%BD%D0%B8%D0%BA-807364706082771/"><img  src="/fb.png" width="50px"><span>@ЗемеделиевПерник</a>
+          </p>
+      </div>
+    </div>
+  </div>
+      </div>
+</footer>
+</div>
+  <script src="/script.js"></script>
+</body>
+</html>

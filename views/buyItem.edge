@@ -1,0 +1,45 @@
+@layout('layout.app')
+
+@section('content')
+<div class="container">
+   <h3>Закупуване на артикул:</h3>
+   <h4>{{item.productType}}</h4>
+   <ul>
+     <li>{{item.publisher}}</li>
+     <li>{{item.price}}</li>
+   </ul>
+   <h4>Информация за доставка:</h4>
+   <form action="/items/buy/{{item._id}}" method="POST">
+    <input type="hidden" name="publisher" value="{{item.publisher}}">
+    <div class="form-group">
+        <label for="email">Email:</label><br>
+        <input type="text" class="form-email" id="email"
+            name="email">
+    </div>
+    <div class="form-group">
+       <label for="name">Име и Фамилия::</label><br>
+       <input type="text" class="form-email" id="name"
+        name="name">
+      </div>
+    <div class="form-group">
+       <label for="email">Телефон за връзка:</label><br>
+       <input type="text" class="form-email" id="email"
+        name="phone">
+    </div>
+    <div class="form-group">
+      <label for="address">Адрес:</label><br>
+      <input type="address" class="form-email" id="address"
+       name="address">
+     </div>
+    <div class="form-group">
+      <label for="amount">Количество:</label><br>
+      <select name="amount">
+      @each(number in range(1,item.amount + 1))
+        <option value="{{number}}">{{number}}</option>
+      @endeach
+      </select>
+    </div>
+    <button class="btn btn-primary">Направи поръчката</button>
+   </form>
+</div>
+@endsection

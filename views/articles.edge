@@ -1,0 +1,18 @@
+@layout('layout.app')
+
+@section('content')
+
+<br>
+<div class="container-fluid">
+
+     @each(post in posts)
+       <div class="col-lg-10 blogShort">
+         <h1><a href="articles/{{post._id}}">{{post.title}}</a></h1>                   
+            <article><p>
+              {{post.content.slice(0,300)}}...
+            </p></article>
+       </div>
+    @endeach
+</div>
+
+@endsection

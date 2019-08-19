@@ -1,0 +1,28 @@
+@layout('layout.app')
+
+@section('content')
+<br>
+<br>
+ <div class="container-fluid col-sm-6 col-sm-offset-1">
+    <h3>Публикуване на статия</h3>
+    <form action="/posts/store" method="POST">
+      <div class="form-group">
+       <label for="name">Заглавие:</label>
+       <input type="text" class="form-control" id="title"
+        name="title" placeholder="Заглавие">
+      </div>
+      <div class="form-group">
+        <label for="author">Автор:</label>
+        <input type="text" class="form-control" id="author"
+        name="author" placeholder="Въведи парола">
+      </div>    
+      <div class="form-group">
+          <label>Съдържание:</label><br>
+          <textarea name="content" cols="80" rows="9"
+            class="wmd-input processed" placeholder="Въведи статията">
+          </textarea><br>
+      </div>
+      <button class="btn btn-primary">Качване</button>
+    </form> 
+  </div>
+@endsection

@@ -1,0 +1,1 @@
+module.exports = {databasePass : "alabala78", emailPass : '1234abvg'};

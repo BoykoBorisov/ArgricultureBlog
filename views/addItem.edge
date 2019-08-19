@@ -1,0 +1,28 @@
+@layout('layout.app')
+
+@section('content')
+<br>
+<br>
+ <div class="container-fluid col-sm-6 col-sm-offset-1">
+    <h3>Публикуване на статия</h3>
+    <form action="/items/store" method="POST" enctype="multipart/form-data">
+      <div class="form-group">
+       <label for="productType">Вид продукт:</label>
+       <input type="text" class="form-control" id="productType"
+        name="productType" placeholder="Вид продукт">
+      </div>
+      <div class="form-group">
+        <label for="price">Цена(в лв)</label>
+        <input type="text" class="form-control" id=""
+        name="price">
+      </div>    
+      <div class="form-group">
+        <label for="amount">Количество(в кг.)</label>
+        <input type="text" class="form-control" id="amount"
+        name="amount">
+      </div>
+    
+      <button class="btn btn-primary">Качване</button>
+    </form> 
+  </div>
+@endsection
